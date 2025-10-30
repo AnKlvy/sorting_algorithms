@@ -1,16 +1,9 @@
 def bubble_sort(arr):
-    if len(arr)==1:
-        return arr
-    temp = arr[0]
-
-    for i in range(1, len(arr)):
-        if temp > arr[i]:
-            arr[i-1]=arr[i]
-            arr[i]=temp
-        elif temp < arr[i]:
-            temp = arr[i]
-    return [*bubble_sort(arr[:-1]), arr[-1]]
-
+    for i in range(len(arr)-1):
+        for j in range(len(arr) - i - 1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
 
 l = [2,3,4, 5, 1, 2,7,1]
 
