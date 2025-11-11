@@ -1,3 +1,6 @@
+from common_decorator import print_sorting_result
+
+@print_sorting_result
 def bubble_sort(arr):
     for i in range(len(arr)-1):
         for j in range(len(arr) - i - 1):
@@ -5,6 +8,4 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
-l = [2,3,4, 5, 1, 2,7,1]
-
-print(bubble_sort(l))
+bubble_sort()

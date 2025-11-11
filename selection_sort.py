@@ -1,6 +1,7 @@
-import random
+from common_decorator import print_sorting_result
 
 
+@print_sorting_result
 def selection_sort(arr):
     for i in range(len(arr)):
         min_i = i
@@ -10,10 +11,4 @@ def selection_sort(arr):
 
         arr[i], arr[min_i] = arr[min_i], arr[i]
 
-arr = [random.randrange(0, 22) for i in range(10)]
-
-print(arr)
-
-selection_sort(arr)
-
-print(arr)
+selection_sort()
