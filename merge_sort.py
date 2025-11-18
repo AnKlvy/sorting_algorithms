@@ -13,27 +13,24 @@ def merge_sort(arr):
 def merge(left, right):
     li = 0
     ri = 0
+    sorted_arr = []
     print("merge", left, right)
-    sorted = []
-    while True:
-        if left[li] > right[ri]:
-            sorted.append(right[ri])
-            ri += 1
-            print(li, ri, sorted)
-            if ri == len(right):
-                sorted.extend(left[li:])
-                print("sorted (left >)", li, ri, sorted)
-                return sorted
-        else:
-            sorted.append(left[li])
+    while li < len(left) and ri < len(right):
+        if left[li] <= right[ri]:
+            sorted_arr.append(left[li])
             li += 1
-            print(li, ri, sorted)
-            if li == len(left):
-                sorted.extend(right[ri:])
-                print("sorted (right >=)", li, ri, sorted)
-                return sorted
+        else:
+            sorted_arr.append(right[ri])
+            ri += 1
+        print(li, ri, sorted_arr)
 
 
-l = [4,2,3,1,1,1]
+    sorted_arr.extend(left[li:])
+    sorted_arr.extend(right[ri:])
+    print("sorted", li, ri, sorted_arr)
+
+    return sorted_arr
+
+l = [7, 56, 56, 3, 1, 1, 56, 2, 3, 4, 1]
 
 print("\nEnd of merge sort", merge_sort(l))
