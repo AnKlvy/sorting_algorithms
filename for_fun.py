@@ -30,12 +30,13 @@ def triangle2(n):
 # **
 # * *
 # *  *
-# * * *
-# def triangle3(n):
-#     for i in range(n):
-#         if i != n-1:
-#             print('*' + (i) * ' ' + ('*' if i!=0 else ''))
-#         else:
-#             print('* ' * (n-2))
-#
-# triangle3(2)
+# *   *
+# ******
+def triangle3(n):
+
+    for i in range(n):
+        if i != n-1 or i == 0:
+            print('*' + (i-1) * ' ' + ('*' if i!=0 else ''))
+        else:
+            print('*' * n)
+triangle3(7)
