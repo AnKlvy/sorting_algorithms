@@ -1,3 +1,5 @@
+# O(n^2), 1954, Гарольд Х. Сьюард
+
 def counting_sort(arr):
     if not arr:
         return arr

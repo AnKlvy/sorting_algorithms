@@ -1,6 +1,6 @@
 from common_decorator import print_sorting_result
 
-
+# O(n^2), 1838, Чарльз Бэббидж
 @print_sorting_result
 def selection_sort(arr):
     for i in range(len(arr)):

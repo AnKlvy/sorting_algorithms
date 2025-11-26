@@ -1,4 +1,4 @@
-from common_decorator import print_sorting_result
+# O(n log(n)), 1945, Джон Фон Нейман
 
 def merge_sort(arr):
     if len(arr) == 1:

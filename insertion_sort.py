@@ -1,6 +1,6 @@
 from common_decorator import print_sorting_result
 
-
+# O(n^2), 1945, Джон Фон Нейман
 @print_sorting_result
 def insertion_sort(arr):
     for i in range(1, len(arr)):

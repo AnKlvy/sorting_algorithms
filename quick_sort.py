@@ -1,3 +1,4 @@
+# O(n^2), 1960, Чарльз Антонио Хоар
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
