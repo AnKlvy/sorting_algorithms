@@ -3,10 +3,9 @@ from collections import defaultdict
 
 def counting_sort(arr):
     count_of_nums = defaultdict(int)
-    count_of_nums[arr[0]] += 1
     min_num=arr[0]
     max_num=arr[0]
-    for i in range(1, len(arr)):
+    for i in range(len(arr)):
         if min_num > arr[i]:
             min_num = arr[i]
         if max_num < arr[i]:
@@ -31,7 +30,7 @@ def counting_sort(arr):
     print("Finally:", sorted_output)
     arr[:] = sorted_output
 
-arr = [3,4,5,6,2,5]
+arr = [3,4,-3,-8,5,6,-3,2,5]
 counting_sort(arr)
 
 print(arr)
